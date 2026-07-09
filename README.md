@@ -45,4 +45,9 @@ Dependency Injection
 - @Injectable() Tell NestJS how to treat a class, method, or variable.
 - Used for routing, injecting services, and more.
 - Benifits: It makes the code reusable and clean , testing easier, It promotes loose coupling, improves readability and maintainability.
-- 
+
+REST
+- Represatational state Transfer
+- It is a type of API which uses HTTP Methods and certain rules (GET,PUT,PATCH,DELETE)
+
+** We can only test get HTTP method on browser **

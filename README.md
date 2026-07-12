@@ -51,3 +51,66 @@ REST
 - It is a type of API which uses HTTP Methods and certain rules (GET,PUT,PATCH,DELETE)
 
 ** We can only test get HTTP method on browser **
+
+DTO (Data Transfer Object)
+- An object that carries data between layers (like from client to backend)
+- Used to define the shape of incoming request data.
+- Ensures only required data is passed (security + validation).
+
+Interface
+- Interface define the structure type of an object.
+- Help write clean, structured, type-safe code
+- Used for both request DTO and response object.
+
+* class-validator - Validate for TS property
+* class-transformer - Convert Plan JSON format received from client into class Object
+* Why class validator require because TS remove validation at runtime so we explicitly req. in DTO.
+
+Custom Pipes
+- Pipes are used to transform or validate incoming data.
+- NestJS allows you to create your own Custom pipes
+- It can be used as custom validation, data transformation, or business logic filtering.
+Imp
+- A Pipe runs before the data hits the route handler (controller method).
+- You can apply pipes at method level, controller level, or globally.
+- Custom Pipes implement the Pipe Transform interface.
+
+Protecting Routes
+- It means restricting access to specific API routes.
+- Only authorized users (like logged-in users or admins) can access them.
+
+Guards (@UseGuard('guardname'))
+- Guards are classes that implement logic to decide whether a request is allowed or not.
+- They implement the CanActivate interface and run before the route handler.
+- Mostly used for authentication and authorization.
+
+RBAC
+- create custom decorator by using SetMetadata and enum for roles
+- SetMetadata:is used to attach custom metadata to a class or method.
+- Reflector: is used to read the metadata added by SetMetadata.
+
+Exception filter
+- handler errors and exceptions in a centralized way.
+- help in managing app-wide error handling logic cleanly and consistently.
+- Filter can be applied at method-level, controller level, or globally (in main.ts)
+- @Catch() decorator is used to define which exception the filter will handle.
+
+Middleware
+- Middleware is function which run before the request reaches the controller.
+- Logging incoming requests
+- Authentication token (e.g. checking JWT)
+- Request transformation (e.g. converting string to numbers)
+- Blocking or redirecting requests Setting headers.
+
+Lifecycle Events
+- Special methods/hooks provide by NestJS.
+- Automatically called at different stages of a module/service/component's life
+- Used to perform actions during creation or destruction.
+- Useful for tasks like DB connections, logging, resource cleanup, etc.
+
+1. OnModuleInit() -> Called when the module is initialized.
+2. onModuleDestroy() -> Called before the module is destroyed.
+3. afterModuleInit() (optional) -> Called after all modules are initialized.
+4. onApplicationBootstrap() -> When app is fully bootstrapped.
+5. onApplicationShutdown() -> Called when app is shutting down.
+

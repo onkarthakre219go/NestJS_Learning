@@ -131,6 +131,7 @@ Cons of Embedding
 - If Project is scaling large then use Referencing
 
 - 2nd method is referencing (Storing related data in sepatate documents and linking by IDs).
+- IMP: If you don't use populate method then it only return ID not complete entities.
 
 Relationships
 - One-to-One Relationship (one data linked to one entity)

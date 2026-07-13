@@ -114,3 +114,25 @@ Lifecycle Events
 4. onApplicationBootstrap() -> When app is fully bootstrapped.
 5. onApplicationShutdown() -> Called when app is shutting down.
 
+How to configure Envirnoment variable in NESTJS
+- use command npm i @nestjs/config
+
+Mongo DB
+- Store data in JSON-like document
+- It is document-based, not table-based
+- to install use npm i @nestjs/mongoose mongoose
+
+Mongo DB atlas - cloud database
+
+Embedding
+- Releationship using Embedding (Storing related data inside the same document)
+
+Cons of Embedding
+- If Project is scaling large then use Referencing
+
+- 2nd method is referencing (Storing related data in sepatate documents and linking by IDs).
+
+Relationships
+- One-to-One Relationship (one data linked to one entity)
+- One-to-Many Relationship (one Auther can write many book)
+- Many-to-Many Relationship (Multiple couses with Multiple student buy)

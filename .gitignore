@@ -1,3 +1,7 @@
 /my-nestjs-project/dist
 /my-nestjs-project/node_modules
 /my-nestjs-project/build
+
+/nest-with-postgresql/dist
+/nest-with-postgresql/node_modules
+/nest-with-postgresql/build

@@ -137,3 +137,78 @@ Relationships
 - One-to-One Relationship (one data linked to one entity)
 - One-to-Many Relationship (one Auther can write many book)
 - Many-to-Many Relationship (Multiple couses with Multiple student buy)
+
+- 1-to-m - type: [propName] should be in array.
+
+- Imp -> M-to-M relationship can not use embedding only Referencing will do.
+
+
+PostgreSQL
+- It is a powerful, open-source relational database system.
+- It stores data in rows and tables using SQL (Structured Query Language).
+- It's known for stability, performance, and data integrity.
+
+why PostgreSQL
+- It's free and open-source
+- Supports complex queries, joins, transactions, indexing.
+- Great choice for scalable and secure apps.
+- widely used in startups to enterprise-level apps.
+
+Power of PostgreSQL (SQL + NoSQL hybrid)
+- It's relational like MySQL (tables, schemas, joins). But also supports NoSQL features like: JSON and JSONB columns
+- Full text search
+- Arrays and custom data types
+- So, it gives you the power of both SQL and NoSQL in one system.
+
+TypeORM
+- TypeORM is an Object Relational Mapper for TypeScript.
+- It connects your NestJS app with PostgreSQL using OOP-style code.
+- You define tables as classes using decorators like @Entity, @Column, etc.
+- It makes database queries easier, readable, and type-safe.
+
+Supabase
+- Supabase is the Postgres development platform. just like firebase (noSql).
+
+Packages require for PostgreSQL
+- npm i @nestjs/config
+- npm i @nestjs/typeorm typeorm pg
+  where pg is driver of typeorm.
+
+Authentication
+- Verifying who the user is.
+- Ex. Logging into your Gmail using email & password.
+- It checks if you are a real & registered user.
+
+Authorization
+- Decides what the authenticated user is allowed to do.
+- JWT : A compact, URL-safe token used to securely transmit information between parties.
+
+Use these packages for JWT
+- npm i @nest/jwt passport-jwt @nestjs/passport passport 
+- passport is engine for jwt support
+
+- npm i bcrypt and npm i --save-dev @types/bcrypt
+
+- imp if you don't want to create extra directory in you folder use --flat
+  ex. nest g class auth/user.schema --flat
+  
+GraphQL
+- Modern approach to handle API, Query language for APIs.
+- Developed by Facebook in 2012, relased publicly in 2015.
+- It allow the client to request exactly the data it needs, nothing more or less.
+- GraphQL solves problems of over-fetching and under-fetching REST APIs.
+- Works on a single endpoint, not multiple like REST.
+
+Why GraphQL?
+- REST APIs can lead to over-fetching (too much data) or under-fetching (too little data)
+- with GraphQL, you ask only for what you need. No extra data.
+- GraphQL is faster, flexible and efficient.
+
+Difference between GraphQL and REST API
+- in GraphQL, has only one endpoint
+- no versions
+- complex fetching
+
+Packages
+- npm i @nestjs/apollo @nestjs/graphql apollo-server-express class-transformer class-validator 
+graphql

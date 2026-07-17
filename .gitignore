@@ -5,3 +5,7 @@
 /nest-with-postgresql/dist
 /nest-with-postgresql/node_modules
 /nest-with-postgresql/build
+
+/nest-graphql-mdb/dist
+/nest-graphql-mdb/node_modules
+/nest-graphql-mdb/build

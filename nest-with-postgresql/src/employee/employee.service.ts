@@ -43,4 +43,22 @@ export class EmployeeService {
         }
         return { message: `Employee with ID ${id} has been deleted sucessfully!`}
     }
+
+    async search(filters: { name?: string; department?: string}): Promise<Employee[]> {
+        const query = this.employeeRep.createQueryBuilder('employee');
+
+        if(filters.name) {
+            query.andWhere('employee.name ILIKE :name', // ILIKE use for case sensetive search
+                { name: `%{filters.name}%`} //  use % for all position match
+            )
+        }
+
+        if(filters.department) {
+            query.andWhere('employee.department = :dept',
+                { dept: `{filters.department}`} //  use % for all position match
+            )
+        }
+
+        return query.getMany(); // to get multiple data.
+    }
 }

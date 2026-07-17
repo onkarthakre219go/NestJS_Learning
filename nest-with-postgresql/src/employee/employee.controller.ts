@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Get, Put, Param, Delete } from '@nestjs/common';
+import { Body, Controller, Post, Get, Put, Param, Delete, Query } from '@nestjs/common';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee.entity';
 
@@ -14,6 +14,12 @@ export class EmployeeController {
     @Get()
     async findAll(): Promise<Employee[]> {
         return this.employeeService.findAll();
+    }
+// this search should be before get(:id) otherwise it gives error or else you need to handle with error handler.
+    @Get('search')
+    async searchEmployee(@Query('name') name?: string,
+            @Query('department') department?: string,): Promise<Employee[]> {
+            return this.employeeService.search({ name, department });
     }
 
     @Get(':id')
@@ -35,4 +41,5 @@ export class EmployeeController {
     ): Promise<{ message: string }> {
         return this.employeeService.delete(id);
     }
+
 }

@@ -212,3 +212,28 @@ Difference between GraphQL and REST API
 Packages
 - npm i @nestjs/apollo @nestjs/graphql apollo-server-express class-transformer class-validator 
 graphql
+---------------------------------------------
+
+Prisma ORM
+- Prisma is modern ORM (Object Relational Mapper).
+- It connects your backend code with your database in structured and type-safe way.
+- Think of it as a translator between your app and the database.
+
+Why use Prisma?
+- Auto-generates types, so fewer bugs.
+- Great developer experience with auto-completion.
+- Built-in migration system (no manual DB changes).
+- Works perfectly with TypeScript and NestJs.
+
+What is Neon DB?
+- Neon is a free, serverless PostgreSQL database in the cloud.
+- You don't need to install PostgreSQL locally.
+- Just sign up, get your DB URL, and you're ready to go.
+
+Why Prisma + Neon = Perfect Combo
+- Both are fast, scalable, and easy to set up.
+- Prisma integrates smoothly with Neon just paste the DB URL.
+- No local setup, no hassle, perfect for beginners and pros.
+
+Rate Limiting Using Throttler
+- Throttler package use npm i @nestjs/throttler 

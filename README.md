@@ -22,7 +22,7 @@ Decorators
 
 nest cli command
 to generate controller
-nest g c <controller name>
+nest g controller <controller name>
 
 Services
 - A Typescript class with logic like calculation, data access. etc.
@@ -237,3 +237,11 @@ Why Prisma + Neon = Perfect Combo
 
 Rate Limiting Using Throttler
 - Throttler package use npm i @nestjs/throttler 
+- Just add for Ex. @Throttle({ default: { limit: 3, ttl: 60000 }})
+- and set up all throttle module for root in app module
+
+How to deploy NestJS App on Railway
+- Create an account on Railway
+- Create new project
+- config with your github and link it.
+- got to setting and gernerate domain.
